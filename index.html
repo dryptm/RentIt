@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RentIt.</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@900&family=Bevan&family=Candal&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@800&family=Crete+Round&family=Martel+Sans:wght@300&family=Passion+One&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAyPwxOVSxlRVEla6LA68_pA-O6nyQre8Y",
+            authDomain: "rentit-store.firebaseapp.com",
+            projectId: "rentit-store",
+            storageBucket: "rentit-store.appspot.com",
+            messagingSenderId: "718108756772",
+            appId: "1:718108756772:web:5bbf3b57e61e5c950301b1",
+            measurementId: "G-CHLJT9K4Z3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+
+
+
+
+    <h1 class="rentit">RentIt.</h1>
+
+
+    <div id="cl1">
+        <h3 class="cl1heading" style="text-align: center;font-family: 'Roboto', sans-serif;">What
+            do you want to rent?</h3>
+        <form class="cl1form">
+            <label class="housing">
+                <input type="radio" id="housing" onclick="cl1next1()"> Housing and Property
+            </label>
+            <label class="things">
+                <input type="radio" id="things" onclick="cl1next2()"> Daily Things
+            </label>
+
+        </form>
+    </div>
+    <div id="cl2">
+        <h3 class="cl2heading" style="text-align: center;font-family: 'Roboto', sans-serif;letter-spacing: 2px;">Enter
+            the name of
+            the Location</h3>
+        <input type="text" id="location-input">
+        <button onclick="cl2next()" class="cl2button">Next</button>
+    </div>
+    <div id="cl3">
+        <h3 class="cl3heading" style="text-align: center;font-family: 'Roboto', sans-serif;letter-spacing: 2px;">What
+            BHK do you
+            need?</h3>
+        <form class="form-1">
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox0" onclick="checked0()"> 1 BHK
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox1" onclick="checked1()"> 2 BHK
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox2" onclick="checked2()"> 3 BHK
+            </label>
+        </form>
+        <form class="form-2">
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox3" onclick="checked3()"> 4 BHK
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox4" onclick="checked4()"> 5 BHK
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="checkbox5" onclick="checked5()"> 5+ BHK
+            </label>
+        </form>
+        <button onclick="cl3next()" class="cl2button">Next</button>
+    </div>
+    <div id="cl4">
+        <h3 class="cl4heading" style="text-align: center;font-family: 'Roboto', sans-serif;letter-spacing: 2px;">What is
+            the price range you wish for?</h3>
+        <div class="slider-whole">
+            <div class="middle">
+                <div class="multi-range-slider">
+                    <input type="range" id="input-left" min="0" max="100" value="25">
+                    <input type="range" id="input-right" min="0" max="100" value="75">
+
+                    <div class="slider">
+                        <div class="track"></div>
+                        <div class="range"></div>
+                        <div class="thumb left"></div>
+                        <div class="thumb right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="valueleft" style="display: inline-block;font-family: 'Martel Sans', sans-serif;font-size: 20px;"></p>
+            <p id="valueright" style="display: inline-block;font-family: 'Martel Sans', sans-serif;font-size: 20px;">
+            </p>
+            <button onclick="cl4next()" class="cl4button">Find</button>
+        </div>
+    </div>
+    <script async defer>
+        //real process of the backend
+        //
+        //
+        //
+        //
+        //
+        //
+
+        var s1 = "bla bla",
+            checked_boxes = [0, 0, 0, 0, 0, 0],
+            price_range = [0, 0];
+        var location_entered = "bla bla bla";
+
+        function cl1next1() {
+            s1 = "housing";
+            document.getElementById("cl1").style.opacity = "0%";
+            document.getElementById("cl1").style.visibility = "collapse";
+            document.getElementById("cl2").style.visibility = "visible";
+            document.getElementById("cl2").style.opacity = "100%";
+        }
+
+        function cl1next2() {
+            s1 = "daily_things";
+            document.getElementById("cl1").style.opacity = "0%";
+            document.getElementById("cl1").style.visibility = "collapse";
+            document.getElementById("cl2").style.visibility = "visible";
+            document.getElementById("cl2").style.opacity = "100%";
+        }
+
+        function cl2next() {
+            location_entered = document.getElementById("location-input").value;
+            document.getElementById("cl2").style.opacity = "0%";
+            document.getElementById("cl2").style.visibility = "collapse";
+            document.getElementById("cl3").style.visibility = "visible";
+            document.getElementById("cl3").style.opacity = "100%";
+        }
+
+        //checkboxes
+        function checked0() {
+            if (document.getElementById("checkbox0").checked == true) {
+                checked_boxes[0] = 1;
+            } else {
+                checked_boxes[0] = 0;
+            }
+        }
+
+        function checked1() {
+            if (document.getElementById("checkbox1").checked == true) {
+                checked_boxes[1] = 1;
+            } else {
+                checked_boxes[1] = 0;
+            }
+        }
+
+        function checked2() {
+            if (document.getElementById("checkbox2").checked == true) {
+                checked_boxes[2] = 1;
+            } else {
+                checked_boxes[2] = 0;
+            }
+        }
+
+        function checked3() {
+            if (document.getElementById("checkbox3").checked == true) {
+                checked_boxes[3] = 1;
+            } else {
+                checked_boxes[3] = 0;
+            }
+        }
+
+        function checked4() {
+            if (document.getElementById("checkbox4").checked == true) {
+                checked_boxes[4] = 1;
+            } else {
+                checked_boxes[4] = 0;
+            }
+        }
+
+        function checked5() {
+            if (document.getElementById("checkbox5").checked == true) {
+                checked_boxes[5] = 1;
+            } else {
+                checked_boxes[5] = 0;
+            }
+        }
+
+        function cl3next() {
+            document.getElementById("cl3").style.opacity = "0%";
+            document.getElementById("cl3").style.visibility = "collapse";
+            document.getElementById("cl4").style.visibility = "visible";
+            document.getElementById("cl4").style.opacity = "100%";
+        }
+
+
+
+        //price range
+        var inputLeft = document.getElementById("input-left");
+        var inputRight = document.getElementById("input-right");
+
+        var thumbLeft = document.querySelector(".slider > .thumb.left");
+        var thumbRight = document.querySelector(".slider > .thumb.right");
+        var range = document.querySelector(".slider > .range");
+
+        function setLeftValue() {
+            var _this = inputLeft,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+            document.getElementById("valueleft").innerHTML = ((percent * (27 / 100)) + 3).toFixed(2) + " K"
+            price_range[0] = ((percent * (27 / 100)) + 3).toFixed(2);
+            thumbLeft.style.left = percent + "%";
+            range.style.left = percent + "%";
+        }
+        setLeftValue();
+
+        function setRightValue() {
+            var _this = inputRight,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
+
+            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+            var percent = ((_this.value - min) / (max - min)) * 100;
+            document.getElementById("valueright").innerHTML = ((percent * (27 / 100)) + 3).toFixed(2) + " K"
+            price_range[1] = ((percent * (27 / 100)) + 3).toFixed(2);
+            thumbRight.style.right = (100 - percent) + "%";
+            range.style.right = (100 - percent) + "%";
+        }
+        setRightValue();
+
+        inputLeft.addEventListener("input", setLeftValue);
+        inputRight.addEventListener("input", setRightValue);
+
+        inputLeft.addEventListener("mouseover", function () {
+            thumbLeft.classList.add("hover");
+        });
+        inputLeft.addEventListener("mouseout", function () {
+            thumbLeft.classList.remove("hover");
+        });
+        inputLeft.addEventListener("mousedown", function () {
+            thumbLeft.classList.add("active");
+        });
+        inputLeft.addEventListener("mouseup", function () {
+            thumbLeft.classList.remove("active");
+        });
+
+        inputRight.addEventListener("mouseover", function () {
+            thumbRight.classList.add("hover");
+        });
+        inputRight.addEventListener("mouseout", function () {
+            thumbRight.classList.remove("hover");
+        });
+        inputRight.addEventListener("mousedown", function () {
+            thumbRight.classList.add("active");
+        });
+        inputRight.addEventListener("mouseup", function () {
+            thumbRight.classList.remove("active");
+        });
+
+        var data_json = ['', '', '', ''];
+
+        function cl4next() {
+
+            data_json[0] = s1;
+            data_json[1] = checked_boxes;
+            data_json[2] = location_entered;
+            data_json[3] = price_range;
+            console.log(data_json);
+        }
+    </script>
+</body>
+
+</html>

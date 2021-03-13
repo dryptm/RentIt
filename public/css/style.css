@@ -1,0 +1,313 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+.rentit {
+    margin: 20px 0px 0px 50px;
+    font-family: 'Bevan', cursive;
+    color: #131176;
+    font-size: 40px;
+}
+
+#cl1 {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 417px;
+    height: 300px;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s;
+    visibility: visible;
+}
+
+h3.cl1heading {
+    margin-top: 70px;
+    color: #320D8C;
+    font-size: 40px;
+}
+
+h3.cl4heading {
+    margin-top: 80px;
+    color: #320D8C;
+    font-size: 30px;
+
+}
+
+form.cl1form {
+    margin-top: 50px;
+}
+
+label.housing {
+    margin-left: 150px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 20px;
+}
+
+label.things {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#cl2 {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 417px;
+    height: 300px;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s;
+    opacity: 0%;
+    visibility: collapse;
+}
+
+.cl2heading {
+    margin-top: 65px;
+    color: #320D8C;
+    font-size: 30px;
+}
+
+#location-input {
+    height: 30px;
+    width: 300px;
+    position: absolute;
+    left: 200px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #6e6e6e;
+    font-size: 15px;
+    color: #555555;
+    font-weight: 900;
+    border-style: solid;
+    font-family: 'Martel Sans', sans-serif;
+}
+
+button.cl2button {
+    height: 40px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #320D8C;
+    border-color: #320D8C;
+    width: 100px;
+    border-radius: 20px;
+    position: absolute;
+    left: 304px;
+    top: 200px;
+    transition: all 0.3s;
+}
+
+button.cl2button:active {
+    height: 36px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #320D8C;
+    border-color: #320D8C;
+    width: 96px;
+    border-radius: 20px;
+    position: absolute;
+    left: 306px;
+    top: 202px;
+}
+
+#cl3 {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 417px;
+    height: 300px;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s;
+    opacity: 0%;
+    visibility: collapse;
+}
+
+.cl3heading {
+    margin-top: 60px;
+    color: #320D8C;
+    font-size: 30px;
+}
+
+.form-1 {
+    position: absolute;
+    top: 120px;
+    left: 190px;
+
+}
+
+.form-2 {
+    position: absolute;
+    top: 150px;
+    left: 190px;
+
+}
+
+.checkbox {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 19px
+}
+
+#cl4 {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: 417px;
+    height: 300px;
+    width: 700px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1s;
+    opacity: 0%;
+    visibility: collapse;
+}
+
+#valueleft {
+    position: absolute;
+    top: 120px;
+    left: 140px;
+
+}
+
+#valueright {
+    position: absolute;
+    top: 120px;
+    right: 130px;
+}
+
+/*cl4 range slider*/
+.slider-whole {
+    margin-left: 205px;
+}
+
+.middle {
+    position: relative;
+    width: 60%;
+    margin-top: 37.5px;
+    max-width: 500px;
+}
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 5px;
+    margin: 0 15px;
+}
+
+.slider>.track {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #310d8c28;
+}
+
+.slider>.range {
+    position: absolute;
+    z-index: 2;
+    left: 25%;
+    right: 25%;
+    top: 0;
+    bottom: 0;
+    border-radius: 5px;
+    background-color: #320D8C;
+}
+
+.slider>.thumb {
+    position: absolute;
+    z-index: 3;
+    width: 20px;
+    height: 20px;
+    background-color: #320D8C;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(98, 0, 238, .1);
+    transition: box-shadow .3s ease-in-out;
+}
+
+.slider>.thumb.left {
+    left: 25%;
+    transform: translate(-15px, -8px);
+}
+
+.slider>.thumb.right {
+    right: 25%;
+    transform: translate(15px, -8px);
+}
+
+.slider>.thumb.hover {
+    box-shadow: 0 0 0 10px #3f3dbb50;
+}
+
+.slider>.thumb.active {
+    box-shadow: 0 0 0 15px #3f3dbb8f;
+}
+
+input[type=range] {
+    position: absolute;
+    pointer-events: none;
+    -webkit-appearance: none;
+    z-index: 2;
+    height: 10px;
+    width: 100%;
+    opacity: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    border: 0 none;
+    background-color: #ff000000;
+    -webkit-appearance: none;
+}
+
+
+
+
+
+
+button.cl4button {
+    height: 40px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #320D8C;
+    border-color: #320D8C;
+    width: 100px;
+    border-radius: 20px;
+    position: absolute;
+    left: 304px;
+    top: 200px;
+    transition: all 0.3s;
+}
+
+button.cl4button:active {
+    height: 36px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #320D8C;
+    border-color: #320D8C;
+    width: 96px;
+    border-radius: 20px;
+    position: absolute;
+    left: 306px;
+    top: 202px;
+}
