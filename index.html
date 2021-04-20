@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
 
 <head>
@@ -24,13 +21,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="css/favicon.ico">
 
 </head>
 
 <body>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
@@ -49,6 +47,7 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
         firebase.analytics();
     </script>
 
@@ -132,7 +131,16 @@
             <button onclick="cl4next()" class="cl4button">Find</button>
         </div>
     </div>
+
+
+
+
+
+<!--the script for the code...........................................................................-->
     <script async defer>
+        setTimeout(() => {
+            document.getElementById("cl1").style.opacity = "100%";
+        }, 1);
         //real process of the backend
         //
         //
@@ -305,6 +313,17 @@
             data_json[3] = price_range;
             console.log(data_json);
         }
+        db.collection("users").add({
+                first: "Ada",
+                last: "Lovelace",
+                born: 1815
+            })
+            .then((docRef) => {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
     </script>
 </body>
 
